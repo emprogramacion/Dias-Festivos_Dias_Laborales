@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ejercicio1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Fecha inicial</ion-label>
+    <ion-datetime displayFormat="YYYY MMMM DD"
+    max='2100-12-31'
+    placeholder="Selecciona fecha"
+    [(ngModel)]="fecha_inicial"
+    done-text="Aceptar"
+    cancel-text="Cancelar"
+    ></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Fecha final</ion-label>
+    <ion-datetime displayFormat="YYYY MMMM DD"
+    max='2100-12-31'
+    placeholder="Selecciona fecha"
+    done-text="Aceptar"
+    [(ngModel)]="fecha_final"
+    cancel-text="Cancelar"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-button
+   color="primary"
+   (click)="buscar()"
+   >Buscar</ion-button>
+
+   <ion-text color="primary">
+    <h2>{{label_festivo}}</h2>
+  </ion-text>
+
+
+
+
+
+
+</ion-content>
